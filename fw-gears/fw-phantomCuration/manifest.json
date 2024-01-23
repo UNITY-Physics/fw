@@ -1,0 +1,58 @@
+{
+    "author": "Niall Bourke",
+    "cite": "",
+    "command": "poetry run python run.py",
+    "config": {},
+    "custom": {
+        "gear-builder": {
+            "category": "utility",
+            "image": "flywheel/phantom-curation:0.0.1"
+        },
+        "flywheel": {
+            "classification": {
+                "components": [
+                    "pull-phantom"
+                ],
+                "keywords": [
+                    "curation"
+                ],
+                "modality": [
+                    "MR"
+                ],
+                "type": [
+                    "dicom"
+                ]
+            },
+            "suite": "UNITY Apps"
+        }
+    },
+    "description": "Curate Phantom scans uploaded to Flywheel",
+    "inputs": {
+        "dicom-input": {
+            "base": "file",
+            "description": "FISP Phantom DICOM to trigger curation"
+        },
+        "api-key": {
+            "base": "api-key",
+            "read-only": true
+        }
+    },
+    "environment": {
+        "FLYWHEEL": "/flywheel/v0",
+        "PATH": "/opt/ants/bin/:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "ANTSPATH": "/opt/ants/bin/",
+        "PYTHON_GET_PIP_SHA256": "fa6f3fb93cce234cd4e8dd2beb54a51ab9c247653b52855a48dd44e6b21ff28b",
+        "PYTHON_GET_PIP_URL": "https://github.com/pypa/get-pip/raw/c20b0cfd643cd4a19246ccf204e2997af70f6b21/public/get-pip.py",
+        "PYTHON_PIP_VERSION": "21.2.3",
+        "PYTHON_VERSION": "3.8.11",
+        "GPG_KEY": "E3FF2839C048B25C084DEBE9B26995E310250568",
+        "LANG": "C.UTF-8"
+    },
+    "label": "Phantom Curation",
+    "license": "MIT",
+    "maintainer": "Flywheel <support@flywheel.io>",
+    "name": "phantom-curation",
+    "source": "",
+    "url": "",
+    "version": "0.0.1"
+}
